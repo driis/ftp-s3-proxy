@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  ftp: 
+    build: .
+    ports:
+      - 21:21
+      - 10090-10100:10090-10100
+    volumes:
+      - ftpdata:/home/reolink
+    environment:
+      - FTP_USER=reolink
+      - FTP_PASSWORD=${FTP_PASSWORD}
+volumes:
+  ftpdata:
