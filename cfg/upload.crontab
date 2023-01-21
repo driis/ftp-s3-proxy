@@ -1,0 +1,2 @@
+* * * * * /app/upload.sh >> /app/cron.log 2>&1
+# Run upload
