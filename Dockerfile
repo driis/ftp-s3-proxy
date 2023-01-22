@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-
+RUN echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null
 RUN apt-get update && apt-get install vsftpd -y
 RUN mkdir /var/log/vsftpd && mkdir -p /var/run/vsftpd/empty
 RUN mkdir /app
