@@ -1,6 +1,8 @@
 FROM ubuntu:latest
-RUN echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null
-RUN apt-get update && apt-get install vsftpd -y
+ENV TZ=Europe/Copenhagen
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+RUN apt-get update && apt-get install vsftpd -y && apt-get install awscli -y
 RUN mkdir /var/log/vsftpd && mkdir -p /var/run/vsftpd/empty
 RUN mkdir /app
 WORKDIR /app

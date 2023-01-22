@@ -8,6 +8,6 @@ Place a `.env` file in the root providing the following secttings:
 
 ```
 FTP_PASSWORD=<desired FTP Password>
-AWS_ACCESS_KEY_ID=<key id for upload to s3>
-AWS_SECRET_ACCESS_KEY=<AWS key secret>
+AWS_SECRET_ACCESS_KEY=<key id for upload to s3>
+AWS_ACCESS_KEY_ID=<AWS key secret>
 ```
