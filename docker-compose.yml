@@ -8,7 +8,8 @@ services:
     volumes:
       - ftpdata:/home/reolink
     environment:
-      - FTP_USER=reolink
-      - FTP_PASSWORD=${FTP_PASSWORD}
+      - FTP_USER=reolink      
+    env_file:
+      - .env
 volumes:
   ftpdata:
