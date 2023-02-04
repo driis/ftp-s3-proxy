@@ -1,2 +1,2 @@
-* * * * * bash -c "/app/upload.sh >> /app/cron.log 2>&1"
+*/10 * * * * bash -c "/app/upload.sh >> /app/cron.log 2>&1"
 # Run upload
