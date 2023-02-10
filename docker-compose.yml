@@ -11,5 +11,6 @@ services:
       - FTP_USER=reolink      
     env_file:
       - .env
+    restart: always
 volumes:
   ftpdata:
