@@ -1,7 +1,5 @@
 #! /bin/sh
-echo "$(date) I was here" 
 cd /home/$FTP_USER
-mv *.* process
-for file in process/*.*; do
-    aws s3 mv $file s3://driis-surveillance/
-done
+aws s3 sync . s3://driis-surveillance
+# After sync, delete local so we don't fill up local storage
+rm -r *.*
